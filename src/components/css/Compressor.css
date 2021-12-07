@@ -1,0 +1,24 @@
+.container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.browseDiv{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 2px solid black;
+}
+
+.browseDiv p{
+    margin: 0;
+}
+
+#browseBtn{
+
+}
+
+#downloadBtn{
+    width: 100%;
+}
