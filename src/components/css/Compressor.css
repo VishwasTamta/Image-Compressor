@@ -1,24 +1,104 @@
 .container{
     display: flex;
-    justify-content: space-around;
+}
+
+.compressDiv{
+    display: flex;
     align-items: center;
+}
+
+img{
+    width: 300px;
+    padding: 20px;
 }
 
 .browseDiv{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    border: 2px solid black;
+}
+
+.leftDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.rightDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .browseDiv p{
-    margin: 0;
+    margin: 0px;
+    width: 200px;
 }
 
-#browseBtn{
-
+.browseBtn{
+    width: 200px;
+    border: 2px solid;
 }
 
-#downloadBtn{
-    width: 100%;
-}
+.compressBtn {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+  }
+  
+  .compressBtn:hover {background-color: #3e8e41}
+  
+  .compressBtn:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+
+#downloadBtn {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    border: none;
+    text-align: center;
+    padding: 10px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+  
+  #downloadBtn a {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+    color: #ffff;
+  }
+  
+  #downloadBtn a:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  #downloadBtn:hover a {
+    padding-right: 25px;
+  }
+  
+  #downloadBtn:hover a:after {
+    opacity: 1;
+    right: 0;
+  }

@@ -45,26 +45,28 @@ const Compressor = () => {
             <div className='leftDiv'>
                 {
                 origImage ? (
-                    <img src={ origImageFile } className='image_preview' alt='' style={{width: '200px'}} />
+                    <img src={ origImageFile } className='image_preview' alt='' />
                 ) : (
-                    <img src="https://media.istockphoto.com/vectors/thumbnail-image-vector-graphic-vector-id1147544807?k=20&m=1147544807&s=612x612&w=0&h=pBhz1dkwsCMq37Udtp9sfxbjaMl27JUapoyYpQm0anc=" className='image_preview' alt='' style={{width: '200px'}} />
+                    <img src="https://media.istockphoto.com/vectors/thumbnail-image-vector-graphic-vector-id1147544807?k=20&m=1147544807&s=612x612&w=0&h=pBhz1dkwsCMq37Udtp9sfxbjaMl27JUapoyYpQm0anc=" className='image_preview' alt='' />
                 )}
                 <div className='browseDiv'>
-                    <input type='file' onChange={(e) => handle(e)} id='browseBtn' />
+                    <input type='file' onChange={(e) => handle(e)} id='browseBtn ' />
                 </div>
             </div>
-            { origImage && <button onClick={(e) => handelCompressImage(e)}>Compress</button> }
+            <div className='compressDiv'>
+                { origImage && <button className='compressBtn' onClick={(e) => handelCompressImage(e)}>Compress</button> }
+            </div>
             <div className='rightDiv'>
                 {
                     compressedImage ? (
-                        <img style={{width: '200px'}} alt='' src={compressedImage} />
+                        <img alt='' src={compressedImage} />
                     ) : (
-                        <img style={{width: '200px'}} alt='' src="https://media.istockphoto.com/vectors/thumbnail-image-vector-graphic-vector-id1147544807?k=20&m=1147544807&s=612x612&w=0&h=pBhz1dkwsCMq37Udtp9sfxbjaMl27JUapoyYpQm0anc=" />
+                        <img alt='' src="https://media.istockphoto.com/vectors/thumbnail-image-vector-graphic-vector-id1147544807?k=20&m=1147544807&s=612x612&w=0&h=pBhz1dkwsCMq37Udtp9sfxbjaMl27JUapoyYpQm0anc=" />
                     )
                 }
                 <div>
                     {compressedImage && <button id='downloadBtn'>
-                        <a style={{textDecoration: 'none', color: 'black'}} href={compressedImage} download={fileName}>Download Image</a>
+                        <a style={{textDecoration: 'none'}} href={compressedImage} download={fileName}>Download Image</a>
                         </button>}
                 </div>
             </div>

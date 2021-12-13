@@ -5,8 +5,10 @@ import Steps from './components/steps'
 function App() {
   return (
     <div className="App">
-      <Steps />
-      <Compressor />
+        <Steps />
+        <div className='compressorDiv'>
+          <Compressor />
+        </div>
     </div>
   );
 }
